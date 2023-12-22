@@ -70,7 +70,7 @@ resource "aws_nat_gateway" "ngw" {
   tags = {
     Name = "pralay-ngw"
   }
-  depends_on = [aws_internet_gateway.igw]
+  depends_on = [aws_eip.eip]
 }
 
 resource "aws_route_table" "private-rt" {
